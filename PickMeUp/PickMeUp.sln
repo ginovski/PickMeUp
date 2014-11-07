@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.30723.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PickMeUp.Models", "PickMeUp.Models\PickMeUp.Models.csproj", "{301F0A1C-2A01-4165-A852-035DFB95B9C3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PickMeUp.Data", "PickMeUp.Data\PickMeUp.Data.csproj", "{35BFD368-0359-4FDE-82F7-D6CC448A2FC7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PickMeUp.Web", "PickMeUp.Web\PickMeUp.Web.csproj", "{2035729E-D7FC-4E85-8DFE-DCE163130975}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{301F0A1C-2A01-4165-A852-035DFB95B9C3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{301F0A1C-2A01-4165-A852-035DFB95B9C3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{301F0A1C-2A01-4165-A852-035DFB95B9C3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{301F0A1C-2A01-4165-A852-035DFB95B9C3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{35BFD368-0359-4FDE-82F7-D6CC448A2FC7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{35BFD368-0359-4FDE-82F7-D6CC448A2FC7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{35BFD368-0359-4FDE-82F7-D6CC448A2FC7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{35BFD368-0359-4FDE-82F7-D6CC448A2FC7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2035729E-D7FC-4E85-8DFE-DCE163130975}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2035729E-D7FC-4E85-8DFE-DCE163130975}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2035729E-D7FC-4E85-8DFE-DCE163130975}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2035729E-D7FC-4E85-8DFE-DCE163130975}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
