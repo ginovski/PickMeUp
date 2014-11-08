@@ -11,24 +11,19 @@
             this.Comments = new HashSet<Comment>();
         }
 
-        [Key]
         public int Id { get; set; }
 
         public int AvailableSeats { get; set; }
 
         public decimal Price { get; set; }
 
-        public string DriverId { get; set; }
-
         public int VotePoints { get; set; }
+
+        public string DriverId { get; set; }
 
         public virtual ApplicationUser Driver { get; set; }
 
-        public int FromId { get; set; }
-
         public virtual City From { get; set; }
-
-        public int ToId { get; set; }
 
         public virtual City To { get; set; }
 

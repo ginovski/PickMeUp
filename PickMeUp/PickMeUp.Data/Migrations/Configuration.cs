@@ -68,11 +68,6 @@ namespace PickMeUp.Data.Migrations
 
         protected override void Seed(PickMeUpDbContext context)
         {
-            if (context.Users.Any())
-            {
-                return;
-            }
-
             var cities = this.SeedCities(context);
 
             context.SaveChanges();
