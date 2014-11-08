@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PickMeUp.Data", "PickMeUp.D
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PickMeUp.Web", "PickMeUp.Web\PickMeUp.Web.csproj", "{2035729E-D7FC-4E85-8DFE-DCE163130975}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PickMeUp.Web.Infrastructure", "PickMeUp.Web.Infrastructure\PickMeUp.Web.Infrastructure.csproj", "{1EB5A5F9-6ADA-451A-8130-475EF4B9A7DF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{2035729E-D7FC-4E85-8DFE-DCE163130975}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2035729E-D7FC-4E85-8DFE-DCE163130975}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2035729E-D7FC-4E85-8DFE-DCE163130975}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1EB5A5F9-6ADA-451A-8130-475EF4B9A7DF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1EB5A5F9-6ADA-451A-8130-475EF4B9A7DF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1EB5A5F9-6ADA-451A-8130-475EF4B9A7DF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1EB5A5F9-6ADA-451A-8130-475EF4B9A7DF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
