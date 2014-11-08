@@ -1,5 +1,6 @@
 ﻿namespace PickMeUp.Models
 {
+    using System.Collections.Generic;
     using System.Security.Claims;
     using System.Threading.Tasks;
 
@@ -8,6 +9,15 @@
 
     public class ApplicationUser : IdentityUser
     {
+        public ApplicationUser()
+        {
+            this.Trips = new HashSet<Trip>();
+        }
+
+        public int Points { get; set; }
+
+        public virtual ICollection<Trip> Trips { get; set; }
+
         public async Task<ClaimsIdentity> GenerateUserIdentityAsync(UserManager<ApplicationUser> manager)
         {
             // Note the authenticationType must match the one defined in CookieAuthenticationOptions.AuthenticationType
@@ -15,5 +25,6 @@
             // Add custom user claims here
             return userIdentity;
         }
+
     }
 }

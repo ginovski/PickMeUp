@@ -19,5 +19,7 @@
         {
             return new PickMeUpDbContext();
         }
+
+        public IDbSet<City> Cities { get; set; }
     }
 }
