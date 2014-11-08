@@ -7,18 +7,9 @@
 
     public class HomeController : Controller
     {
-        private IRepository<City> cities;
-
-        public HomeController(IRepository<City> cities)
-        {
-            this.cities = cities;
-        }
-
         public ActionResult Index()
         {
-            var cities = this.cities.All();
-
-            return View(cities);
+            return View();
         }
     }
 }
