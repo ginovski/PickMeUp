@@ -1,5 +1,10 @@
-﻿@{
+﻿@model IEnumerable<PickMeUp.Models.Trip>
+@{
     ViewBag.Title = "Home Page";
 }
 
 <h1>Trips</h1>
+@foreach (var trip in Model)
+{
+    <div>@trip.AdditionalInformation</div>
+}

@@ -1,0 +1,54 @@
+﻿@model PickMeUp.Web.ViewModels.TripViewModel
+@{
+    ViewBag.Title = "Create";
+    var cities = new List<SelectListItem>();
+    foreach (var city in ViewBag.Cities)
+	{
+		 cities.Add(new SelectListItem
+         {
+            Text = city.Name,
+            Value = city.Id.ToString()
+         });
+	}
+}
+
+<h2>Create Trip</h2>
+@using (Html.BeginForm("Create", "Trips", FormMethod.Post))
+{
+    @Html.AntiForgeryToken()
+    
+    @Html.ValidationSummary("", new { @class = "text-danger" })
+    <div class="form-group">
+        @Html.LabelFor(m => m.FromId, new { @class = "col-md-2 control-label" })
+        <div class="col-md-10">
+           @Html.DropDownListFor(m => m.FromId, cities, new { @class = "form-control" })
+        </div>
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.ToId, new { @class = "col-md-2 control-label" })
+        <div class="col-md-10">
+           @Html.DropDownListFor(m => m.ToId, cities, new { @class = "form-control" })
+        </div>
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.Price, new { @class = "col-md-2 control-label" })
+        <div class="col-md-10">
+            @Html.EditorFor(m => m.Price, new { @class = "form-control" })
+        </div>
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.AvailableSeats, new { @class = "col-md-2 control-label" })
+        <div class="col-md-10">
+            @Html.EditorFor(m => m.AvailableSeats, new { @class = "form-control" })
+        </div>
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.AdditionalInformation, new { @class = "col-md-2 control-label" })
+        <div class="col-md-10">
+            @Html.EditorFor(m => m.AdditionalInformation, new { @class = "form-control" })
+        </div>
+    </div>
+    
+    <input type="Submit" value="Create Trip" />
+}
+

@@ -19,6 +19,8 @@
 
         public int VotePoints { get; set; }
 
+        public string AdditionalInformation { get; set; }
+
         public string DriverId { get; set; }
 
         public virtual ApplicationUser Driver { get; set; }

@@ -1,5 +1,6 @@
 ﻿namespace PickMeUp.Web.Controllers
 {
+    using System.Linq;
     using System.Web.Mvc;
 
     using AutoMapper.QueryableExtensions;
@@ -10,9 +11,16 @@
 
     public class HomeController : Controller
     {
+        private IRepository<Trip> trips;
+
+        public HomeController(IRepository<Trip> trips)
+        {
+            this.trips = trips;
+        }
+
         public ActionResult Index()
         {
-            return View();
+            return View(this.trips.All());
         }
     }
 }
