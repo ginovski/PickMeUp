@@ -32,7 +32,7 @@
         }
 
         [HttpPost]
-        public ActionResult Create(TripViewModel trip)
+        public ActionResult Create(CreateTripViewModel trip)
         {
             if (ModelState.IsValid)
             {
@@ -53,6 +53,13 @@
             }
 
             return View();
+        }
+
+        public ActionResult Details(int id)
+        {
+            var trip = Mapper.Map<Trip, TripViewModel>(this.trips.GetById(id));
+
+            return View(trip);
         }
     }
 }

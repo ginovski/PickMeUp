@@ -1,27 +1,37 @@
 ﻿namespace PickMeUp.Web.ViewModels
 {
+    using AutoMapper;
     using PickMeUp.Models;
     using PickMeUp.Web.Infrastructure.Mapping;
-    using System.ComponentModel.DataAnnotations;
 
-    public class TripViewModel : IMapFrom<Trip>
+    public class TripViewModel : IMapFrom<Trip>, IHaveCustomMappings
     {
-        [Display(Name="Available Seats")]
-        [Required]
         public int AvailableSeats { get; set; }
 
         public decimal Price { get; set; }
 
-        [Display(Name = "Additional Information")]
-        [DataType(DataType.MultilineText)]
-        public string AdditionalInformation { get; set; }
+        public int VotePoints { get; set; }
 
-        [Display(Name = "From")]
-        [Required]
-        public int FromId { get; set; }
+        public string AdditionalInfo { get; set; }
 
-        [Display(Name = "To")]
-        [Required]
-        public int ToId { get; set; }
+        public string Driver { get; set; }
+
+        public string From { get; set; }
+
+        public string To { get; set; }
+
+        // TODO: Comments and Passangers
+
+        public void CreateMappings(IConfiguration configuration)
+        {
+            configuration.CreateMap<Trip, TripViewModel>()
+               .ForMember(m => m.Driver, opt => opt.MapFrom(u => u.Driver.UserName));
+
+            configuration.CreateMap<Trip, TripViewModel>()
+               .ForMember(m => m.From, opt => opt.MapFrom(u => u.From.Name));
+
+            configuration.CreateMap<Trip, TripViewModel>()
+               .ForMember(m => m.To, opt => opt.MapFrom(u => u.To.Name));
+        }
     }
 }
